@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PennyGuard</title>
+  <link rel="stylesheet" href="PennyGuard.css">
+  <script src="PennyGuard.js" defer></script>
+</head>
+<body>
+    <main> 
+       <h1>PennyGuard</h1>
+       <p>Kundalik Xarajatlaringizni kuzating.</p>
+       <p>Jami xarajat: <strong id="total-amount">0 so'm</strong></p>
+       <p>Shu oy xarajati: <strong id="monthly-total">0 so‘m</strong></p>
+       <h2>Shu oy — kategoriyalar bo‘yicha</h2>
+        <ul id="monthly-category-list"></ul>
+       <form id="expense-form">
+        <label for="expense-name">Xarajat nomi:</label>
+        <input
+        id="expense-name"
+        type="text"
+        placeholder="Masalan: Oshxonada tushlik"
+        required
+        maxlength="60"
+        >
+        <label for="expense-category">Kategoriya</label>
+    <select id="expense-category" required>
+        <option value="" disabled selected>Kategoriyani tanlang</option>
+        <option value="nonushta">Ovqat — nonushta</option>
+        <option value="tushlik">Ovqat — tushlik</option>
+        <option value="kechki-ovqat">Ovqat — kechki ovqat</option>
+        <option value="avtobus">Transport — avtobus</option>
+        <option value="taksi">Transport — taksi</option>
+        <option value="uy">Uy-ro‘zg‘or</option>
+        <option value="talim">Ta’lim</option>
+        <option value="aloqa">Aloqa</option>
+        <option value="sogliq">Sog‘liq</option>
+        <option value="boshqa">Boshqa</option>
+    </select>
+    
+        <label for="expense-amount">Summa:</label>  
+        <input
+            id="expense-amount"
+            type="number"
+            min="1"
+            step="1"
+            placeholder="Masalan: 20000"
+            required
+        > 
+
+        <label for="expense-date">Sana:</label>
+        <input id="expense-date" type="date" required>
+        
+        <button type="submit">Xarajat qo'shish</button>
+       </form>
+       <h2>Xarajatlar Ro'yxati</h2>
+       <ul id="expense-list"></ul>
+    </main>
+</body>
+</html>
+
+
