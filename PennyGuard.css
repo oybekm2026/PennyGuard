@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f3f6f4;
+  color: #23332b;
+}
+
+main {
+  width: min(900px, calc(100% - 32px));
+  margin: 40px auto;
+}
+
+h1 {
+  color: #1f6b50;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+    max-width: 520px;
+    margin: 24px 0;
+    padding: 24px;
+    background: #fff;
+    border: 1px solid #dfe8e1;
+    border-radius: 16px;
+}
+
+form label {
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #ccd8cf;
+  border-radius: 8px;
+  font: inherit;
+  background: #fff;
+}
+
+form input:focus,
+form select:focus {
+  outline: 2px solid #c8e6d2;
+  border-color: #1f6b50;
+}
+
+form button {
+  margin-top: 8px;
+  padding: 12px;
+  border: 0;
+  border-radius: 8px;
+  background: #1f6b50;
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #19573f;
+}
+
+#total-amount,
+#monthly-total {
+  color: #1f6b50;
+  font-size: 20px;
+}
+
+h2 {
+  margin-top: 32px;
+  color: #23332b;
+}
+
+#expense-list {
+  max-width: 520px;
+  padding: 0;
+  list-style: none;
+}
+
+#expense-list li {
+  margin-bottom: 10px;
+  padding: 13px 15px;
+  border: 1px solid #dfe8e1;
+  border-radius: 10px;
+  background: #fff;
+}
+
+#expense-list button {
+  margin-left: 12px;
+  padding: 6px 10px;
+  border: 0;
+  border-radius: 6px;
+  color: #8a342f;
+  background: #fde8e7;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#expense-list button:hover {
+  background: #f8d4d2;
+}
+
+@media (max-width: 600px) {
+  main {
+    width: calc(100% - 24px);
+    margin: 24px auto;
+  }
+
+  form {
+    padding: 18px;
+  }
+
+  #expense-list li {
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+  }
+
+  #expense-list button {
+    display: block;
+    margin: 8px 0 0;
+  }
+}
+
+#monthly-category-list {
+  max-width: 520px;
+  padding: 0;
+  list-style: none;
+}
+
+#monthly-category-list li {
+  margin-bottom: 8px;
+  padding: 10px 12px;
+  border-left: 4px solid #1f6b50;
+  border-radius: 8px;
+  background: #e6f2e9;
+}
+
